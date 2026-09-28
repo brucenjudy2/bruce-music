@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bruce Donaldson live music — upcoming gigs and promo video.">
+  <title>Bruce Donaldson | Live Music</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #15191f;
+      --panel2: #1b2027;
+      --text: #f6f6f2;
+      --muted: #adb3bb;
+      --accent: #d9aa61;
+      --line: #2a313a;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(217,170,97,.12), transparent 34rem),
+        var(--bg);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 44vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 68px 0 52px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+
+    .tagline {
+      max-width: 700px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      background: var(--panel);
+    }
+
+    .button.primary {
+      color: #17130d;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    main { padding: 54px 0 72px; }
+    section + section { margin-top: 62px; }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      letter-spacing: -.025em;
+    }
+
+    .video-shell {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #000;
+      box-shadow: 0 18px 50px rgba(0,0,0,.28);
+    }
+
+    .video-shell iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .shows {
+      display: grid;
+      gap: 12px;
+    }
+
+    .show {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+    }
+
+    .date {
+      color: var(--accent);
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .venue {
+      font-size: 1.08rem;
+      font-weight: 750;
+    }
+
+    .time {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        min-height: auto;
+        padding: 56px 0 42px;
+      }
+
+      main { padding-top: 42px; }
+
+      .show {
+        grid-template-columns: 82px 1fr;
+        gap: 12px 14px;
+      }
+
+      .time { grid-column: 2; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Solo Acoustic • Live Music</p>
+      <h1>Bruce Donaldson</h1>
+      <p class="tagline">Classic rock, acoustic favorites, and a few surprises — live around Glendale and the northwest Valley.</p>
+      <div class="actions">
+        <a class="button primary" href="#shows">Upcoming Gigs</a>
+        <a class="button" href="#promo">Watch Promo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="promo">
+      <h2>Live Promo</h2>
+      <div class="video-shell">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/CchB_zwN-5k"
+          title="Bruce Donaldson live music promo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section id="shows">
+      <h2>Upcoming Gigs</h2>
+
+      <div class="shows">
+        <article class="show">
+          <div class="date">Sep 30</div>
+          <div class="venue">Tre Bicchieri</div>
+          <div class="time">5:00–8:00 PM</div>
+        </article>
+
+        <article class="show">
+          <div class="date">Oct 10</div>
+          <div class="venue">Hopsology Taproom &amp; Wine Bar</div>
+          <div class="time">5:00–8:00 PM</div>
+        </article>
+
+        <article class="show">
+          <div class="date">Oct 16</div>
+          <div class="venue">Oscar’s Pier 83</div>
+          <div class="time">6:00–8:00 PM</div>
+        </article>
+
+        <article class="show">
+          <div class="date">Nov 6</div>
+          <div class="venue">Oscar’s Pier 83</div>
+          <div class="time">6:00–8:00 PM</div>
+        </article>
+
+        <article class="show">
+          <div class="date">Nov 27</div>
+          <div class="venue">Oscar’s Pier 83</div>
+          <div class="time">6:00–8:00 PM</div>
+        </article>
+      </div>
+
+      <p class="note">Dates and times are subject to change.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">BruceDonaldsonMusic.com</div>
+  </footer>
+</body>
+</html>
