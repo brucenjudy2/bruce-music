@@ -48,4 +48,51 @@ main{padding-top:20px;padding-bottom:40px}.section-card{padding:30px 28px;margin
 <article class="show"><div class="date-badge"><span class="month">Sep</span><span class="day">30</span></div><div class="venue">Tre Bicchieri<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
 <article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">3</span></div><div class="venue">Fall of Freedom<small>First Christian Church, Scottsdale</small></div><div class="time">1:00–3:00 PM event</div></article>
 <article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">10</span></div><div class="venue">Hopsology Taproom &amp; Wine Bar<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
-</div></section><section class="section-card contact"><h2>Book Bruce</h2><p>Interested in live solo acoustic music for your venue or event?</p><a class="button primary" href="mailto:HikerBruceMusic@gmail.com?subject=Live%20music%20booking%20inquiry">Booking Inquiry</a></section></main><footer>© 2026 Bruce Donaldson • Glendale, Arizona</footer></body></html>
+</div></section><section class="section-card contact"><h2>Book Bruce</h2><p>Interested in live solo acoustic music for your venue or event?</p><a class="button primary" href="mailto:HikerBruceMusic@gmail.com?subject=Live%20music%20booking%20inquiry">Booking Inquiry</a></section></main><footer>© 2026 Bruce Donaldson • Glendale, Arizona</footer>
+<script>
+/* Automatically classify performances using Arizona calendar dates.
+   New performances should be added with their date in data-show-date (YYYY-MM-DD).
+   Existing 2026 listings without that attribute are supported automatically. */
+(() => {
+  const upcoming = document.querySelector('#upcoming .shows');
+  const history = document.querySelector('#history .shows');
+  if (!upcoming || !history) return;
+
+  const months = {Jan:1, Feb:2, Mar:3, Apr:4, May:5, Jun:6,
+                  Jul:7, Aug:8, Sep:9, Oct:10, Nov:11, Dec:12};
+  const todayParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Phoenix', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).formatToParts(new Date());
+  const value = type => todayParts.find(part => part.type === type).value;
+  const today = `${value('year')}-${value('month')}-${value('day')}`;
+
+  const shows = [...upcoming.querySelectorAll(':scope > article.show'),
+                 ...history.querySelectorAll(':scope > article.show')];
+  for (const show of shows) {
+    let date = show.getAttribute('data-show-date');
+    if (!date) {
+      const m = show.querySelector('.month')?.textContent.trim().slice(0, 3);
+      const d = Number(show.querySelector('.day')?.textContent.trim());
+      if (!months[m] || !Number.isInteger(d) || d < 1 || d > 31) continue;
+      date = `2026-${String(months[m]).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+      show.dataset.showDate = date;
+    }
+  }
+  const dated = shows.filter(show => /^\d{4}-\d{2}-\d{2}$/.test(show.dataset.showDate || ''));
+  const future = dated.filter(show => show.dataset.showDate >= today)
+    .sort((a,b) => a.dataset.showDate.localeCompare(b.dataset.showDate));
+  const past = dated.filter(show => show.dataset.showDate < today)
+    .sort((a,b) => b.dataset.showDate.localeCompare(a.dataset.showDate));
+
+  for (const show of future) upcoming.appendChild(show);
+  for (const show of past) history.appendChild(show);
+
+  if (!future.length) {
+    const message = document.createElement('p');
+    message.className = 'section-subtitle';
+    message.textContent = 'More dates coming soon.';
+    upcoming.appendChild(message);
+  }
+})();
+</script>
+</body></html>
