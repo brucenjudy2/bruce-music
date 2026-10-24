@@ -18,8 +18,30 @@ main{padding-top:20px;padding-bottom:40px}.section-card{padding:30px 28px;margin
 .contact-banner a:hover,.contact-banner a:focus-visible{background:#ffe9c7;outline:3px solid #e0a550;outline-offset:2px}
 .contact-banner .symbol{color:#a33827;font-size:1.5rem;line-height:1;flex:none}
 @media(max-width:580px){.contact-banner{padding:24px 17px 22px;margin-left:14px;margin-right:14px}.contact-banner a{flex-basis:100%;font-size:.96rem}}
+
+/* Song request view: all contained in this index file */
+body.song-view > header,body.song-view > .contact-banner,body.song-view > main,body.song-view > footer{display:none!important}
+#song-page{display:none;max-width:950px;margin:0 auto;padding:30px 20px 75px}
+body.song-view #song-page{display:block}
+.song-head{padding:26px 24px;background:linear-gradient(130deg,#123e53,#09283a);border:2px solid var(--gold);border-radius:14px;margin-bottom:20px}
+.song-head h1{font-family:Georgia,serif;font-size:clamp(2rem,6vw,3.4rem);line-height:1.12;margin:15px 0 9px;color:var(--cream)}
+.song-head p{margin:0;color:var(--paper)}
+.song-home{display:inline-flex;color:var(--cream);text-decoration:none;font-weight:700;border-bottom:1px solid var(--gold);padding:3px 0}
+.song-controls{position:sticky;top:0;z-index:5;background:#09283af5;padding:14px 0;border-bottom:1px solid #cfa46280}
+#song-search{width:100%;border:2px solid var(--gold);border-radius:9px;padding:14px 16px;background:#fff9ed;color:#102738;font:inherit;font-size:1.05rem}
+#song-search:focus{outline:3px solid #d6a35c88;outline-offset:2px}
+#song-count{color:var(--paper);font-size:.94rem;margin:8px 2px 0}
+.song-group{margin:23px 0 32px}
+.song-group h2{font-family:Georgia,serif;font-size:1.7rem;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.song-group ul{list-style:none;margin:0;padding:0;border:1px solid #d6a35c65;border-radius:10px;overflow:hidden}
+.song-group li{display:flex;align-items:baseline;justify-content:space-between;gap:8px 24px;padding:11px 15px;border-bottom:1px solid #d6a35c45;background:#123547}
+.song-group li:nth-child(even){background:#0b2939}
+.song-group li:last-child{border-bottom:0}
+.song-title{font-weight:750;color:#fff0ce}.song-artist{color:#e9c793;text-align:right;font-size:.94rem}
+#song-no-results{padding:18px;background:#15374a;border:1px solid var(--gold);border-radius:8px}
+@media(max-width:580px){#song-page{padding:16px 14px 50px}.song-head{padding:21px 17px}.song-group li{display:block;padding:11px 13px}.song-artist{display:block;text-align:left;margin-top:2px;font-size:.9rem}}
 </style></head><body>
-<header class="hero wrap"><p class="eyebrow">Friday Night Spirit • Live Acoustic Classics</p><h1>Bruce<br>Donaldson</h1><div class="hero-rule"><span>★</span></div><p class="tagline"><strong>Classic rock, acoustic favorites, and a few surprises</strong> — live music around Glendale and the northwest Valley.</p><div class="actions"><a class="button primary" href="#upcoming">Upcoming Gigs</a><a class="button" href="#history">2026 Show History</a><a class="button" href="#promo">Watch Promo</a></div></header>
+<header class="hero wrap"><p class="eyebrow">Friday Night Spirit • Live Acoustic Classics</p><h1>Bruce<br>Donaldson</h1><div class="hero-rule"><span>★</span></div><p class="tagline"><strong>Classic rock, acoustic favorites, and a few surprises</strong> — live music around Glendale and the northwest Valley.</p><div class="actions"><a class="button primary" href="#upcoming">Upcoming Gigs</a><a class="button" href="#history">2026 Show History</a><a class="button" href="#promo">Watch Promo</a><a class="button" href="#songs">Song Request List</a></div></header>
 <section class="contact-banner wrap" aria-label="Contact and bookings"><div class="contact-grid">
 <a href="tel:+16027386357" aria-label="Call Bruce at 602-738-6357"><span class="symbol" aria-hidden="true">☎</span><span>602-738-6357</span></a>
 <a href="mailto:HikerBruceMusic@gmail.com" aria-label="Email Bruce at HikerBruceMusic@gmail.com"><span class="symbol" aria-hidden="true">✉</span><span>HikerBruceMusic@gmail.com</span></a>
@@ -27,10 +49,9 @@ main{padding-top:20px;padding-bottom:40px}.section-card{padding:30px 28px;margin
 </div></section>
 <main class="wrap"><section id="promo" class="section-card"><h2>Live Promo</h2><p class="section-subtitle">A quick look at the music, the vibe, and the venues.</p><div class="video-shell"><iframe src="https://www.youtube-nocookie.com/embed/CchB_zwN-5k?rel=0&amp;playsinline=1" title="Bruce Donaldson live music promo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div></section>
 <section id="upcoming" class="section-card"><h2>Upcoming Gigs</h2><p class="section-subtitle">Scheduled performances for the remainder of 2026.</p><div class="shows">
-<article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">16</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">6:00–8:00 PM</div></article>
 <article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">31</span></div><div class="venue">Hopsology Taproom &amp; Wine Bar<small>Glendale, Arizona • Halloween</small></div><div class="time">5:00–8:00 PM</div></article>
-<article class="show"><div class="date-badge"><span class="month">Nov</span><span class="day">6</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">6:00–8:00 PM</div></article>
-<article class="show"><div class="date-badge"><span class="month">Nov</span><span class="day">27</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">6:00–8:00 PM</div></article>
+<article class="show"><div class="date-badge"><span class="month">Nov</span><span class="day">6</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">5:30–7:30 PM</div></article>
+<article class="show"><div class="date-badge"><span class="month">Nov</span><span class="day">27</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">5:30–7:30 PM</div></article>
 </div></section><section id="history" class="section-card history"><h2>2026 Performance History</h2><p class="section-subtitle">Shows played this year — a record of live performances across the Valley.</p><div class="shows"><article class="show"><div class="date-badge"><span class="month">Jan</span><span class="day">21</span></div><div class="venue">Tre Bicchieri<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
 <article class="show"><div class="date-badge"><span class="month">Feb</span><span class="day">11</span></div><div class="venue">Tre Bicchieri<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
 <article class="show"><div class="date-badge"><span class="month">Mar</span><span class="day">4</span></div><div class="venue">Tre Bicchieri<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
@@ -48,6 +69,7 @@ main{padding-top:20px;padding-bottom:40px}.section-card{padding:30px 28px;margin
 <article class="show"><div class="date-badge"><span class="month">Sep</span><span class="day">30</span></div><div class="venue">Tre Bicchieri<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
 <article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">3</span></div><div class="venue">Fall of Freedom<small>First Christian Church, Scottsdale</small></div><div class="time">1:00–3:00 PM event</div></article>
 <article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">10</span></div><div class="venue">Hopsology Taproom &amp; Wine Bar<small>Glendale, Arizona</small></div><div class="time">5:00–8:00 PM</div></article>
+<article class="show"><div class="date-badge"><span class="month">Oct</span><span class="day">16</span></div><div class="venue">Oscar’s Pier 83<small>Glendale, Arizona</small></div><div class="time">6:00–8:00 PM</div></article>
 </div></section><section class="section-card contact"><h2>Book Bruce</h2><p>Interested in live solo acoustic music for your venue or event?</p><a class="button primary" href="mailto:HikerBruceMusic@gmail.com?subject=Live%20music%20booking%20inquiry">Booking Inquiry</a></section></main><footer>© 2026 Bruce Donaldson • Glendale, Arizona</footer>
 <script>
 /* Automatically classify performances using Arizona calendar dates.
@@ -93,6 +115,152 @@ main{padding-top:20px;padding-bottom:40px}.section-card{padding:30px 28px;margin
     message.textContent = 'More dates coming soon.';
     upcoming.appendChild(message);
   }
+})();
+</script>
+
+<div id="song-page" aria-label="Song Request List">
+<div class="song-head"><a class="song-home" href="#home">← Back to Homepage</a><h1>Song Request List</h1><p>The Music of Bruce Donaldson · Find a favorite, then ask Bruce to play it!</p></div>
+<div class="song-controls"><label for="song-search">Search songs or artists</label><input id="song-search" type="search" placeholder="Type a song or artist…" autocomplete="off"><p id="song-count" role="status"></p></div>
+<section class="song-group" data-group="false"><h2>Songs A–Z</h2><ul>
+<li data-match="16th avenue lacy j. dalton"><span class="song-title">16th Avenue</span><span class="song-artist">Lacy J. Dalton</span></li>
+<li data-match="amarillo by morning george strait"><span class="song-title">Amarillo By Morning</span><span class="song-artist">George Strait</span></li>
+<li data-match="america neil diamond"><span class="song-title">America</span><span class="song-artist">Neil Diamond</span></li>
+<li data-match="america simon &amp; garfunkel"><span class="song-title">America</span><span class="song-artist">Simon &amp; Garfunkel</span></li>
+<li data-match="american pie don mclean"><span class="song-title">American Pie</span><span class="song-artist">Don McLean</span></li>
+<li data-match="auld lang syne - 1788 robert burns"><span class="song-title">Auld Lang Syne - 1788</span><span class="song-artist">Robert Burns</span></li>
+<li data-match="austin blake shelton"><span class="song-title">Austin</span><span class="song-artist">Blake Shelton</span></li>
+<li data-match="bad moon rising creedence clearwater revival"><span class="song-title">Bad Moon Rising</span><span class="song-artist">Creedence Clearwater Revival</span></li>
+<li data-match="bama breeze jimmy buffett"><span class="song-title">Bama Breeze</span><span class="song-artist">Jimmy Buffett</span></li>
+<li data-match="behind blue eyes the who"><span class="song-title">Behind Blue Eyes</span><span class="song-artist">The Who</span></li>
+<li data-match="big iron marty robbins"><span class="song-title">Big Iron</span><span class="song-artist">Marty Robbins</span></li>
+<li data-match="blowin’ in the wind bob dylan"><span class="song-title">Blowin’ in the Wind</span><span class="song-artist">Bob Dylan</span></li>
+<li data-match="the boxer paul simon"><span class="song-title">The Boxer</span><span class="song-artist">Paul Simon</span></li>
+<li data-match="brain damage / eclipse pink floyd"><span class="song-title">Brain Damage / Eclipse</span><span class="song-artist">Pink Floyd</span></li>
+<li data-match="brown eyed girl van morrison"><span class="song-title">Brown Eyed Girl</span><span class="song-artist">Van Morrison</span></li>
+<li data-match="carefree highway gordon lightfoot"><span class="song-title">Carefree Highway</span><span class="song-artist">Gordon Lightfoot</span></li>
+<li data-match="cat’s in the cradle harry chapin"><span class="song-title">Cat’s in the Cradle</span><span class="song-artist">Harry Chapin</span></li>
+<li data-match="centerfield john fogerty"><span class="song-title">Centerfield</span><span class="song-artist">John Fogerty</span></li>
+<li data-match="changes in latitudes, changes in attitudes jimmy buffett"><span class="song-title">Changes in Latitudes, Changes in Attitudes</span><span class="song-artist">Jimmy Buffett</span></li>
+<li data-match="city of new orleans arlo guthrie"><span class="song-title">City of New Orleans</span><span class="song-artist">Arlo Guthrie</span></li>
+<li data-match="colder weather zac brown"><span class="song-title">Colder Weather</span><span class="song-artist">Zac Brown</span></li>
+<li data-match="come monday jimmy buffett"><span class="song-title">Come Monday</span><span class="song-artist">Jimmy Buffett</span></li>
+<li data-match="comfortably numb pink floyd"><span class="song-title">Comfortably Numb</span><span class="song-artist">Pink Floyd</span></li>
+<li data-match="daisy jane america"><span class="song-title">Daisy Jane</span><span class="song-artist">America</span></li>
+<li data-match="the dance garth brooks"><span class="song-title">The Dance</span><span class="song-artist">Garth Brooks</span></li>
+<li data-match="danny’s song kenny loggins"><span class="song-title">Danny’s Song</span><span class="song-artist">Kenny Loggins</span></li>
+<li data-match="diamonds and rust joan baez"><span class="song-title">Diamonds and Rust</span><span class="song-artist">Joan Baez</span></li>
+<li data-match="duncan paul simon"><span class="song-title">Duncan</span><span class="song-artist">Paul Simon</span></li>
+<li data-match="eve of destruction barry mcguire"><span class="song-title">Eve of Destruction</span><span class="song-artist">Barry McGuire</span></li>
+<li data-match="father and son cat stevens"><span class="song-title">Father and Son</span><span class="song-artist">Cat Stevens</span></li>
+<li data-match="feels so right alabama"><span class="song-title">Feels So Right</span><span class="song-artist">Alabama</span></li>
+<li data-match="fishin’ in the dark nitty gritty dirt band"><span class="song-title">Fishin’ in the Dark</span><span class="song-artist">Nitty Gritty Dirt Band</span></li>
+<li data-match="free bird lynyrd skynyrd"><span class="song-title">Free Bird</span><span class="song-artist">Lynyrd Skynyrd</span></li>
+<li data-match="the gambler kenny rogers"><span class="song-title">The Gambler</span><span class="song-artist">Kenny Rogers</span></li>
+<li data-match="good riddance (time of your life) green day"><span class="song-title">Good Riddance (Time of Your Life)</span><span class="song-artist">Green Day</span></li>
+<li data-match="happy together the turtles"><span class="song-title">Happy Together</span><span class="song-artist">The Turtles</span></li>
+<li data-match="have you ever seen the rain creedence clearwater revival"><span class="song-title">Have You Ever Seen The Rain</span><span class="song-artist">Creedence Clearwater Revival</span></li>
+<li data-match="hello again neil diamond"><span class="song-title">Hello Again</span><span class="song-artist">Neil Diamond</span></li>
+<li data-match="hello in there john prine"><span class="song-title">Hello in There</span><span class="song-artist">John Prine</span></li>
+<li data-match="highwayman highwaymen"><span class="song-title">Highwayman</span><span class="song-artist">Highwaymen</span></li>
+<li data-match="i guess he’d rather be in colorado john denver"><span class="song-title">I Guess He’d Rather Be in Colorado</span><span class="song-artist">John Denver</span></li>
+<li data-match="illegal smile john prine"><span class="song-title">Illegal Smile</span><span class="song-artist">John Prine</span></li>
+<li data-match="it’s 5:00 somewhere alan jackson &amp; jimmy buffett"><span class="song-title">It’s 5:00 Somewhere</span><span class="song-artist">Alan Jackson &amp; Jimmy Buffett</span></li>
+<li data-match="king of the road roger miller"><span class="song-title">King of the Road</span><span class="song-artist">Roger Miller</span></li>
+<li data-match="knockin’ on heaven’s door bob dylan"><span class="song-title">Knockin’ on Heaven’s Door</span><span class="song-artist">Bob Dylan</span></li>
+<li data-match="leaving on a jet plane john denver"><span class="song-title">Leaving on a Jet Plane</span><span class="song-artist">John Denver</span></li>
+<li data-match="lonely people america"><span class="song-title">Lonely People</span><span class="song-artist">America</span></li>
+<li data-match="long hard road nitty gritty dirt band"><span class="song-title">Long Hard Road</span><span class="song-artist">Nitty Gritty Dirt Band</span></li>
+<li data-match="losing my religion r.e.m."><span class="song-title">Losing My Religion</span><span class="song-artist">R.E.M.</span></li>
+<li data-match="lucille kenny rogers"><span class="song-title">Lucille</span><span class="song-artist">Kenny Rogers</span></li>
+<li data-match="lucky man emerson, lake, &amp; palmer"><span class="song-title">Lucky Man</span><span class="song-artist">Emerson, Lake, &amp; Palmer</span></li>
+<li data-match="man on the moon r.e.m."><span class="song-title">Man On The Moon</span><span class="song-artist">R.E.M.</span></li>
+<li data-match="margaritaville jimmy buffett"><span class="song-title">Margaritaville</span><span class="song-artist">Jimmy Buffett</span></li>
+<li data-match="me and bobby mcgee janis joplin"><span class="song-title">Me and Bobby McGee</span><span class="song-artist">Janis Joplin</span></li>
+<li data-match="me and you and a dog named boo lobo"><span class="song-title">Me and You and a Dog Named Boo</span><span class="song-artist">Lobo</span></li>
+<li data-match="meet me in montana dan seals and marie osmond"><span class="song-title">Meet Me In Montana</span><span class="song-artist">Dan Seals and Marie Osmond</span></li>
+<li data-match="melissa allman brothers band"><span class="song-title">Melissa</span><span class="song-artist">Allman Brothers Band</span></li>
+<li data-match="monster mash bobby pickett"><span class="song-title">Monster Mash</span><span class="song-artist">Bobby Pickett</span></li>
+<li data-match="a month of sundays don henley"><span class="song-title">A Month of Sundays</span><span class="song-artist">Don Henley</span></li>
+<li data-match="much too young garth brooks"><span class="song-title">Much Too Young</span><span class="song-artist">Garth Brooks</span></li>
+<li data-match="my hometown bruce springsteen"><span class="song-title">My Hometown</span><span class="song-artist">Bruce Springsteen</span></li>
+<li data-match="old dogs, children and watermelon wine tom t. hall"><span class="song-title">Old Dogs, Children And Watermelon Wine</span><span class="song-artist">Tom T. Hall</span></li>
+<li data-match="the one i love r.e.m."><span class="song-title">The One I Love</span><span class="song-artist">R.E.M.</span></li>
+<li data-match="pancho and lefty willie nelson"><span class="song-title">Pancho and Lefty</span><span class="song-artist">Willie Nelson</span></li>
+<li data-match="paradise john prine"><span class="song-title">Paradise</span><span class="song-artist">John Prine</span></li>
+<li data-match="peaceful easy feeling eagles"><span class="song-title">Peaceful Easy Feeling</span><span class="song-artist">Eagles</span></li>
+<li data-match="people are crazy billy currington"><span class="song-title">People Are Crazy</span><span class="song-artist">Billy Currington</span></li>
+<li data-match="a pirate looks at forty jimmy buffett"><span class="song-title">A Pirate Looks at Forty</span><span class="song-artist">Jimmy Buffett</span></li>
+<li data-match="please come to boston dave loggins"><span class="song-title">Please Come to Boston</span><span class="song-artist">Dave Loggins</span></li>
+<li data-match="poems, prayers and promises john denver"><span class="song-title">Poems, Prayers and Promises</span><span class="song-artist">John Denver</span></li>
+<li data-match="proud mary john fogerty"><span class="song-title">Proud Mary</span><span class="song-artist">John Fogerty</span></li>
+<li data-match="puff, the magic dragon peter, paul and mary"><span class="song-title">Puff, the Magic Dragon</span><span class="song-artist">Peter, Paul and Mary</span></li>
+<li data-match="red rubber ball the cyrkle (simon and garfunkel)"><span class="song-title">Red Rubber Ball</span><span class="song-artist">The Cyrkle (Simon and Garfunkel)</span></li>
+<li data-match="ridin’ the storm out reo speedwagon"><span class="song-title">Ridin’ the Storm Out</span><span class="song-artist">REO Speedwagon</span></li>
+<li data-match="the river bruce springsteen"><span class="song-title">The River</span><span class="song-artist">Bruce Springsteen</span></li>
+<li data-match="the river garth brooks"><span class="song-title">The River</span><span class="song-artist">Garth Brooks</span></li>
+<li data-match="runnin’ down a dream tom petty, jeff lynne"><span class="song-title">Runnin’ Down a Dream</span><span class="song-artist">Tom Petty, Jeff Lynne</span></li>
+<li data-match="sandman america"><span class="song-title">Sandman</span><span class="song-artist">America</span></li>
+<li data-match="sister golden hair america"><span class="song-title">Sister Golden Hair</span><span class="song-artist">America</span></li>
+<li data-match="sloop john b beach boys"><span class="song-title">Sloop John B</span><span class="song-artist">Beach Boys</span></li>
+<li data-match="solitary man neil diamond"><span class="song-title">Solitary Man</span><span class="song-artist">Neil Diamond</span></li>
+<li data-match="southern cross crosby, stills, nash"><span class="song-title">Southern Cross</span><span class="song-artist">Crosby, Stills, Nash</span></li>
+<li data-match="space oddity david bowie"><span class="song-title">Space Oddity</span><span class="song-artist">David Bowie</span></li>
+<li data-match="sundown gordon lightfoot"><span class="song-title">Sundown</span><span class="song-artist">Gordon Lightfoot</span></li>
+<li data-match="sweet caroline neil diamond"><span class="song-title">Sweet Caroline</span><span class="song-artist">Neil Diamond</span></li>
+<li data-match="take me home, country roads john denver"><span class="song-title">Take Me Home, Country Roads</span><span class="song-artist">John Denver</span></li>
+<li data-match="taxi harry chapin"><span class="song-title">Taxi</span><span class="song-artist">Harry Chapin</span></li>
+<li data-match="tequila sunrise eagles"><span class="song-title">Tequila Sunrise</span><span class="song-artist">Eagles</span></li>
+<li data-match="this old house skb schuyler, knoblock, bickhardt"><span class="song-title">This Old House</span><span class="song-artist">SKB Schuyler, Knoblock, Bickhardt</span></li>
+<li data-match="tin man america"><span class="song-title">Tin Man</span><span class="song-artist">America</span></li>
+<li data-match="toes zac brown"><span class="song-title">Toes</span><span class="song-artist">Zac Brown</span></li>
+<li data-match="turn the page bob seger"><span class="song-title">Turn The Page</span><span class="song-artist">Bob Seger</span></li>
+<li data-match="wagon wheel darius rucker"><span class="song-title">Wagon Wheel</span><span class="song-artist">Darius Rucker</span></li>
+<li data-match="where everybody knows your name (cheers theme) gary portnoy"><span class="song-title">Where Everybody Knows Your Name (Cheers Theme)</span><span class="song-artist">Gary Portnoy</span></li>
+<li data-match="who’ll stop the rain john fogerty"><span class="song-title">Who’ll Stop the Rain</span><span class="song-artist">John Fogerty</span></li>
+<li data-match="wish you were here pink floyd"><span class="song-title">Wish You Were Here</span><span class="song-artist">Pink Floyd</span></li>
+<li data-match="the wreck of the edmund fitzgerald gordon lightfoot"><span class="song-title">The Wreck of the Edmund Fitzgerald</span><span class="song-artist">Gordon Lightfoot</span></li>
+<li data-match="you may be right billy joel"><span class="song-title">You May Be Right</span><span class="song-artist">Billy Joel</span></li>
+<li data-match="your song elton john"><span class="song-title">Your Song</span><span class="song-artist">Elton John</span></li>
+</ul></section><section class="song-group" data-group="true"><h2>Christmas & Holiday Songs</h2><ul>
+<li data-match="away in a manger traditional"><span class="song-title">Away in a Manger</span><span class="song-artist">Traditional</span></li>
+<li data-match="christmas for cowboys john denver"><span class="song-title">Christmas for Cowboys</span><span class="song-artist">John Denver</span></li>
+<li data-match="deck the halls traditional"><span class="song-title">Deck the Halls</span><span class="song-artist">traditional</span></li>
+<li data-match="jingle bells traditional"><span class="song-title">Jingle Bells</span><span class="song-artist">Traditional</span></li>
+<li data-match="rudolph the red-nosed reindeer traditional"><span class="song-title">Rudolph the Red-Nosed Reindeer</span><span class="song-artist">Traditional</span></li>
+<li data-match="silent night traditional"><span class="song-title">Silent Night</span><span class="song-artist">Traditional</span></li>
+<li data-match="what child is this? traditional"><span class="song-title">What Child Is This?</span><span class="song-artist">Traditional</span></li>
+</ul></section><p id="song-no-results" hidden>No matching songs found.</p></div>
+<script>
+(() => {
+  const input = document.getElementById('song-search');
+  const count = document.getElementById('song-count');
+  const groups = [...document.querySelectorAll('#song-page .song-group')];
+  const rows = [...document.querySelectorAll('#song-page li[data-match]')];
+  const empty = document.getElementById('song-no-results');
+  function navigate() {
+    const songs = location.hash.toLowerCase() === '#songs';
+    document.body.classList.toggle('song-view', songs);
+    document.title = songs ? 'Song Request List | Bruce Donaldson Music' : 'Bruce Donaldson | Live Music & 2026 Shows';
+    if (songs) { document.documentElement.scrollTop = 0; filter(); }
+    else if(location.hash === '#home'){history.replaceState(null,'',location.pathname+location.search);window.scrollTo(0,0);}
+  }
+  function filter() {
+    const query = input.value.trim().toLocaleLowerCase();
+    let visible = 0;
+    for (const li of rows) {
+      const match = li.dataset.match.includes(query);
+      li.hidden = !match;
+      // Explicit display override because row uses flex CSS.
+      li.style.display = match ? '' : 'none';
+      if (match) visible++;
+    }
+    for (const group of groups) group.hidden = ![...group.querySelectorAll('li')].some(li => !li.hidden);
+    count.textContent = `${visible} song${visible===1?'':'s'}${query?' found':' available'}`;
+    empty.hidden = visible > 0;
+  }
+  window.addEventListener('hashchange',navigate);
+  input.addEventListener('input',filter);
+  navigate();
 })();
 </script>
 </body></html>
